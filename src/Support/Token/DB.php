@@ -21,7 +21,7 @@ class DB extends TokenBase
     public function setFromModel($model)
     {
         $this->setAccessToken($model->accessToken);
-        $this->setRereshToken($model->refreshToken);
+        $this->setRefreshToken($model->refreshToken);
         $this->setExpires($model->expires);
         $this->setAdditional($model->additional);
 
