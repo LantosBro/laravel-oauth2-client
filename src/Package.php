@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2;
+namespace LantosBro\OAuth2;
 
 class Package
 {

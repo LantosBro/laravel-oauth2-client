@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Http\Requests;
+namespace LantosBro\OAuth2\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

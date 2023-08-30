@@ -1,11 +1,11 @@
 {
-    "name": "macsidigital/laravel-oauth2-client",
+    "name": "lantosbro/laravel-oauth2-client",
     "description": "Laravel OAuth2 Client",
     "keywords": [
         "macsidigital",
         "laravel-oauth2-client"
     ],
-    "homepage": "https://github.com/macsidigital/laravel-oauth2-client",
+    "homepage": "https://github.com/lantosbro/laravel-oauth2-client",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MacsiDigital\\OAuth2\\": "src"
+            "LantosBro\\OAuth2\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MacsiDigital\\OAuth2\\Tests\\": "tests"
+            "LantosBro\\OAuth2\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MacsiDigital\\OAuth2\\Providers\\OAuth2ServiceProvider"
+                "LantosBro\\OAuth2\\Providers\\OAuth2ServiceProvider"
             ],
             "aliases": {
 

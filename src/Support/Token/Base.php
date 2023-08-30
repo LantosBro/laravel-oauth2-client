@@ -1,8 +1,9 @@
 <?php
-namespace MacsiDigital\OAuth2\Support\Token;
 
-use MacsiDigital\OAuth2\Contracts\Token;
-use MacsiDigital\OAuth2\Facades\Connection;
+namespace LantosBro\OAuth2\Support\Token;
+
+use LantosBro\OAuth2\Contracts\Token;
+use LantosBro\OAuth2\Facades\Connection;
 
 abstract class Base implements Token
 {

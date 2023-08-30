@@ -1,5 +1,6 @@
 <?php
-namespace MacsiDigital\OAuth2\Support\Token;
+
+namespace LantosBro\OAuth2\Support\Token;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -38,7 +39,7 @@ class File extends Base
 
     public function generateContent()
     {
-        return "<?php 
+        return "<?php
 		return [
 			'accessToken' => '".$this->accessToken."',
 			'refreshToken' => '".$this->refreshToken."',

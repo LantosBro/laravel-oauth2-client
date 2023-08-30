@@ -6,8 +6,8 @@
 
 <p align="center">
  <a href="https://github.com/MacsiDigital/laravel-oauth2-client/actions?query=workflow%3ATests"><img src="https://github.com/MacsiDigital/laravel-oauth2-client/workflows/Tests/badge.svg" style="max-width:100%;"  alt="tests badge"></a>
- <a href="https://packagist.org/packages/macsidigital/laravel-oauth2-client"><img src="https://img.shields.io/packagist/v/macsidigital/laravel-oauth2-client.svg?style=flat-square" alt="version badge"/></a>
- <a href="https://packagist.org/packages/macsidigital/laravel-oauth2-client"><img src="https://img.shields.io/packagist/dt/macsidigital/laravel-oauth2-client.svg?style=flat-square" alt="downloads badge"/></a>
+ <a href="https://packagist.org/packages/lantosbro/laravel-oauth2-client"><img src="https://img.shields.io/packagist/v/lantosbro/laravel-oauth2-client.svg?style=flat-square" alt="version badge"/></a>
+ <a href="https://packagist.org/packages/lantosbro/laravel-oauth2-client"><img src="https://img.shields.io/packagist/dt/lantosbro/laravel-oauth2-client.svg?style=flat-square" alt="downloads badge"/></a>
 </p>
 
 A little OAuth2 Client Authentication Library
@@ -21,7 +21,7 @@ We invest a lot in creating [open source packages](https://macsidigital.co.uk/op
 You can install the package via composer:
 
 ```bash
-composer require macsidigital/laravel-oauth2-client
+composer require lantosbro/laravel-oauth2-client
 ```
 
 ## Package helper
@@ -46,7 +46,7 @@ The file driver will save a file in storage/app/oauth2, which will keep the toke
 If you want to use the DB driver and would like to customise teh table name then you can publish the config file and amend the table_name column
 
 ``` bash
-php artisan vendor:publish --provider="MacsiDigital\OAuth2\Providers\OAuth2ServiceProvider" --tag="integration-config"
+php artisan vendor:publish --provider="LantosBro\OAuth2\Providers\OAuth2ServiceProvider" --tag="integration-config"
 ```
 
 #### Migrations
@@ -54,7 +54,7 @@ php artisan vendor:publish --provider="MacsiDigital\OAuth2\Providers\OAuth2Servi
 If using DB driver you will need to publish migrations.
 
 ``` bash
-php artisan vendor:publish --provider="MacsiDigital\OAuth2\Providers\OAuth2ServiceProvider" --tag="integration-migrations"
+php artisan vendor:publish --provider="LantosBro\OAuth2\Providers\OAuth2ServiceProvider" --tag="integration-migrations"
 ```
 
 Then you will need to run migrations
@@ -76,8 +76,8 @@ return [
 	'options' => [
 		'scope' => ['openid email profile offline_access accounting.settings accounting.transactions accounting.contacts accounting.journals.read accounting.reports.read accounting.attachments']
 	],
-	'tokenProcessor' => '\MacsiDigital\OAuth2\Support\AuthorisationProcessor',
-	'tokenModel' => '\MacsiDigital\OAuth2\Support\Token\File',
+	'tokenProcessor' => '\LantosBro\OAuth2\Support\AuthorisationProcessor',
+	'tokenModel' => '\LantosBro\OAuth2\Support\Token\File',
 	'authorisedRedirect' => '',
 	'failedRedirect' => '',
 ];
@@ -112,11 +112,11 @@ So this is how it would look for Xero:-
 ``` php
 <?php
 
-namespace MacsiDigital\Xero\Support;
+namespace LantosBro\Xero\Support;
 
-use MacsiDigital\Xero\Facades\Identity;
-use MacsiDigital\Xero\Identity\Connection;
-use MacsiDigital\Xero\Exceptions\CantRetreiveTenantException;
+use LantosBro\Xero\Facades\Identity;
+use LantosBro\Xero\Identity\Connection;
+use LantosBro\Xero\Exceptions\CantRetreiveTenantException;
 
 class AuthorisationProcessor
 {
@@ -155,10 +155,10 @@ Now our access token etc are saved we should be able to use the macsidigital/lar
 ``` php
 <?php
 
-namespace MacsiDigital\Xero\Support;
+namespace LantosBro\Xero\Support;
 
-use MacsiDigital\Xero\Facades\Client;
-use MacsiDigital\API\Support\Entry as ApiEntry;
+use LantosBro\Xero\Facades\Client;
+use LantosBro\API\Support\Entry as ApiEntry;
 
 class Entry extends ApiEntry
 {

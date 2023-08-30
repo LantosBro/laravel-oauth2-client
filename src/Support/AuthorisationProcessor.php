@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Support;
+namespace LantosBro\OAuth2\Support;
 
 class AuthorisationProcessor
 {

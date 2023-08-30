@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use MacsiDigital\Oauth2\Integration;
+use LantosBro\Oauth2\Integration;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 

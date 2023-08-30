@@ -1,9 +1,10 @@
 <?php
-namespace MacsiDigital\OAuth2;
 
-use MacsiDigital\OAuth2\Contracts\Connection as ConnectionContract;
-use MacsiDigital\OAuth2\Support\Providers\GenericProvider;
-use MacsiDigital\OAuth2\Traits\ForwardsCalls;
+namespace LantosBro\OAuth2;
+
+use LantosBro\OAuth2\Contracts\Connection as ConnectionContract;
+use LantosBro\OAuth2\Support\Providers\GenericProvider;
+use LantosBro\OAuth2\Traits\ForwardsCalls;
 
 class Connection implements ConnectionContract
 {

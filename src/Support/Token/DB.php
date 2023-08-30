@@ -1,5 +1,8 @@
 <?php
-namespace MacsiDigital\OAuth2\Support\Token;
+
+namespace LantosBro\OAuth2\Support\Token;
+
+use LantosBro\OAuth2\Integration;
 
 class DB extends Base
 {

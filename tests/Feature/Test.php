@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Tests\Feature;
+namespace LantosBro\OAuth2\Tests\Feature;
 
 use PHPUnit\Framework\TestCase;
 

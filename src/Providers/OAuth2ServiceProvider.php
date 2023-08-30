@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Providers;
+namespace LantosBro\OAuth2\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -28,11 +28,11 @@ class OAuth2ServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('oauth2', 'MacsiDigital\OAuth2\Package');
+        $this->app->bind('oauth2', 'LantosBro\OAuth2\Package');
 
         // Register the main class to use with the facade
-        $this->app->bind('oauth2.connection', 'MacsiDigital\OAuth2\Contracts\Connection');
+        $this->app->bind('oauth2.connection', 'LantosBro\OAuth2\Contracts\Connection');
 
-        $this->app->bind('MacsiDigital\OAuth2\Contracts\Connection', 'MacsiDigital\OAuth2\Connection');
+        $this->app->bind('LantosBro\OAuth2\Contracts\Connection', 'LantosBro\OAuth2\Connection');
     }
 }

@@ -1,15 +1,15 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Http\Controllers;
+namespace LantosBro\OAuth2\Http\Controllers;
 
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Cookie;
-use MacsiDigital\OAuth2\Contracts\Connection;
-use MacsiDigital\OAuth2\Exceptions\AlreadyAuthenticatedException;
-use MacsiDigital\OAuth2\Exceptions\ConfigDoesntExistException;
-use MacsiDigital\OAuth2\Exceptions\IdentityProviderException;
-use MacsiDigital\OAuth2\Http\Requests\OAuth2Validation;
+use LantosBro\OAuth2\Contracts\Connection;
+use LantosBro\OAuth2\Exceptions\AlreadyAuthenticatedException;
+use LantosBro\OAuth2\Exceptions\ConfigDoesntExistException;
+use LantosBro\OAuth2\Exceptions\IdentityProviderException;
+use LantosBro\OAuth2\Http\Requests\OAuth2Validation;
 
 class AuthorisationController extends BaseController
 {
@@ -59,7 +59,7 @@ class AuthorisationController extends BaseController
             ]);
 
             $token = new $config['tokenProcessor']($accessToken, $integration);
-            
+
             Cookie::forget('oauth2state');
 
             return redirect($config['authorisedRedirect']);

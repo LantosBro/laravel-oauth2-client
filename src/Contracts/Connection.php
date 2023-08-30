@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Contracts;
+namespace LantosBro\OAuth2\Contracts;
 
 interface Connection
 {

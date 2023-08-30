@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Tests\Unit;
+namespace LantosBro\OAuth2\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 

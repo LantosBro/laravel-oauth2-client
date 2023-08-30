@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Exceptions;
+namespace LantosBro\OAuth2\Exceptions;
 
 class ConfigDoesntExistException extends Base
 {

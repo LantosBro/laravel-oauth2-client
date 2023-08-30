@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Facades;
+namespace LantosBro\OAuth2\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

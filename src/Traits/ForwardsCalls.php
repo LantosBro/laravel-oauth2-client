@@ -1,6 +1,6 @@
 <?php
 
-namespace MacsiDigital\OAuth2\Traits;
+namespace LantosBro\OAuth2\Traits;
 
 use BadMethodCallException;
 use Error;
