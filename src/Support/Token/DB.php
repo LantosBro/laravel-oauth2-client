@@ -28,7 +28,7 @@ class DB extends TokenBase
         return $this;
     }
 
-    public function setAdditional(array $additional)
+    public function setAdditional(array|null $additional)
     {
         $this->additional = $additional;
 
