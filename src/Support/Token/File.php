@@ -43,6 +43,7 @@ class File extends Base
 		return [
 			'accessToken' => '".$this->accessToken."',
 			'refreshToken' => '".$this->refreshToken."',
+			'pkceCode' => '".$this->pkceCode."',
 			'expires' => '".$this->expires."',
 		];";
     }

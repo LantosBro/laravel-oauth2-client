@@ -12,7 +12,12 @@ class Integration extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'accessToken', 'refreshToken', 'expires', 'additional',
+        'name',
+        'accessToken',
+        'pkceCode',
+        'refreshToken',
+        'expires',
+        'additional',
     ];
 
     /**
@@ -21,7 +26,11 @@ class Integration extends Model
      * @var array
      */
     protected $hidden = [
-        'accessToken', 'refreshToken', 'expires', 'additional',
+        'accessToken',
+        'pkceCode',
+        'refreshToken',
+        'expires',
+        'additional',
     ];
 
     /**

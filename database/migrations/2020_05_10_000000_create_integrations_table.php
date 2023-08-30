@@ -18,6 +18,7 @@ class CreateIntegrationsTable extends Migration
             $table->string('name');
             $table->string('access_token');
             $table->string('refresh_token');
+            $table->string('pkce_code')->nullable();
             $table->dateTime('expires');
             $table->json('additional')->nullable();
             $table->timestamps();

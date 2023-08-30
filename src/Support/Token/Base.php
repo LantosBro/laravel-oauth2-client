@@ -11,6 +11,7 @@ abstract class Base implements Token
     protected $refreshToken;
     protected $expires;
     protected $integration;
+    protected $pkceCode;
 
     public function set($options)
     {
@@ -45,6 +46,18 @@ abstract class Base implements Token
         return $this->refreshToken;
     }
 
+    public function setPkceCode($code)
+    {
+        $this->pkceCode = $code;
+
+        return $this;
+    }
+
+    public function pkceCode()
+    {
+        return $this->pkceCode;
+    }
+
     public function setExpires($timeStamp)
     {
         $this->expires = $timeStamp;
@@ -71,7 +84,7 @@ abstract class Base implements Token
     {
         if ($this->hasExpired()) {
             $config = config($this->integration);
-            $provider = Connection::withOptions(array_merge(['redirectUri' => route('oauth2.callback', ['integration' => $this->integration])], $config['oauth2']));
+            $provider = Connection::withOptions($config['oauth2']);
             $accessToken = $provider->getAccessToken('refresh_token', [
                 'refresh_token' => $this->refreshToken(),
             ]);
@@ -86,6 +99,7 @@ abstract class Base implements Token
         $this->set([
             'accessToken' => $accessToken->getToken(),
             'refreshToken' => $accessToken->getRefreshToken(),
+            'pkceCode' => $accessToken->getPkceCode(),
             'expires' => $accessToken->getExpires(),
         ])->save();
 

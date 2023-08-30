@@ -28,7 +28,7 @@ class AuthorisationController extends BaseController
             throw new ConfigDoesntExistException($integration);
         }
 
-        $connection->withOptions(array_merge(['redirectUri' => route('oauth2.callback', ['integration' => $integration])], $config['oauth2']));
+        $connection->withOptions($config['oauth2']);
 
         $url = $connection->getAuthorizationUrl($config['options']);
 
@@ -50,7 +50,7 @@ class AuthorisationController extends BaseController
             throw new ConfigDoesntExistException($integration);
         }
 
-        $connection->withOptions(array_merge(['redirectUri' => route('oauth2.callback', ['integration' => $integration])], $config['oauth2']));
+        $connection->withOptions($config['oauth2']);
 
         try {
             // Try to get an access token using the authorization code grant.

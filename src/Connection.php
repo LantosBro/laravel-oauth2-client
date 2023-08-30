@@ -10,6 +10,9 @@ class Connection implements ConnectionContract
 {
     use ForwardsCalls;
 
+    const PKCE_METHOD_S256 = 'S256';
+    const PKCE_METHOD_PLAIN = 'plain';
+
     protected $provider;
     protected $options;
 
