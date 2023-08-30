@@ -3,8 +3,9 @@
 namespace LantosBro\OAuth2\Support\Token;
 
 use LantosBro\OAuth2\Integration;
+use LantosBro\OAuth2\Support\Token\Base as TokenBase;
 
-class DB extends Base
+class DB extends TokenBase
 {
     protected $model;
     protected $additional;
