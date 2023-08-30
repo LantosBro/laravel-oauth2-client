@@ -11,7 +11,6 @@ abstract class Base implements Token
     protected $refreshToken;
     protected $expires;
     protected $integration;
-    protected $pkceCode;
 
     public function set($options)
     {
@@ -44,18 +43,6 @@ abstract class Base implements Token
     public function refreshToken()
     {
         return $this->refreshToken;
-    }
-
-    public function setPkceCode($code)
-    {
-        $this->pkceCode = $code;
-
-        return $this;
-    }
-
-    public function pkceCode()
-    {
-        return $this->pkceCode;
     }
 
     public function setExpires($timeStamp)
@@ -99,7 +86,6 @@ abstract class Base implements Token
         $this->set([
             'accessToken' => $accessToken->getToken(),
             'refreshToken' => $accessToken->getRefreshToken(),
-            'pkceCode' => $accessToken->getPkceCode(),
             'expires' => $accessToken->getExpires(),
         ])->save();
 

@@ -14,7 +14,6 @@ class Integration extends Model
     protected $fillable = [
         'name',
         'accessToken',
-        'pkceCode',
         'refreshToken',
         'expires',
         'additional',
@@ -27,7 +26,6 @@ class Integration extends Model
      */
     protected $hidden = [
         'accessToken',
-        'pkceCode',
         'refreshToken',
         'expires',
         'additional',

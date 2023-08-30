@@ -10,7 +10,6 @@ $factory->define(Integration::class, function (Faker $faker) {
     return [
     	'accessToken' => Str::random('100'),
         'refreshToken' => Str::random('20'),
-        'pkceCode' => Str::random('20'),
         'expires' => Str::random('10'),
         'additional' => '',
     ];
