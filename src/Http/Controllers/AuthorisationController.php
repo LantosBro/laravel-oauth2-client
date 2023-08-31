@@ -15,7 +15,7 @@ class AuthorisationController extends BaseController
 {
     use ValidatesRequests;
 
-    public function create(Connection $connection, $integration)
+    public function create($integration, Connection $connection)
     {
         // Are we already authenticated?
         if ($connection->authenticated($integration)) {
@@ -37,7 +37,7 @@ class AuthorisationController extends BaseController
         return redirect()->away($url);
     }
 
-    public function store(OAuth2Validation $request, Connection $connection, $integration)
+    public function store($integration, OAuth2Validation $request, Connection $connection)
     {
         // Are we already authenticated?
         if ($connection->authenticated($integration)) {

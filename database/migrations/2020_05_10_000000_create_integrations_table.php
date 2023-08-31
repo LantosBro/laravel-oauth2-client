@@ -16,8 +16,8 @@ class CreateIntegrationsTable extends Migration
         Schema::create(config('oauth2.table_name'), function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('accessToken');
-            $table->string('refreshToken');
+            $table->longtext('accessToken');
+            $table->longtext('refreshToken');
             $table->dateTime('expires');
             $table->json('additional')->nullable();
             $table->timestamps();

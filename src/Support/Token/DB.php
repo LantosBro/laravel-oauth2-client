@@ -2,6 +2,7 @@
 
 namespace LantosBro\OAuth2\Support\Token;
 
+use Illuminate\Support\Facades\Date;
 use LantosBro\OAuth2\Integration;
 use LantosBro\OAuth2\Support\Token\Base as TokenBase;
 
@@ -42,9 +43,10 @@ class DB extends TokenBase
 
     public function save()
     {
+
         $this->model->accessToken = $this->accessToken();
         $this->model->refreshToken = $this->refreshToken();
-        $this->model->expires = $this->expires();
+        $this->model->expires = Date::parse($this->expires())->toDateTime();
         $this->model->additional = $this->additional();
         $this->model->save();
 
