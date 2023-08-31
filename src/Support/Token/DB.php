@@ -43,7 +43,7 @@ class DB extends TokenBase
 
     public function save()
     {
-
+        $this->model->name = $this->integration;
         $this->model->accessToken = $this->accessToken();
         $this->model->refreshToken = $this->refreshToken();
         $this->model->expires = Date::parse($this->expires())->toDateTime();
