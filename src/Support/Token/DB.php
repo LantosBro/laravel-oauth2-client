@@ -13,6 +13,7 @@ class DB extends TokenBase
 
     public function __construct($integration)
     {
+        $this->integration = $integration;
         $this->model = Integration::where('name', $integration)->firstOrNew();
         $this->setFromModel($this->model);
 
